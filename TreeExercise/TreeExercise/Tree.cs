@@ -31,11 +31,10 @@ namespace TreeExercise
         /// </summary>
         public void Insert()
         {
-            Node prevNode = null;//this is the previous parent node. Keeping track of the parent
             Node currNode = null;//this is the current node that is being addressed.
 
             //setting up for loop for the amount of levels
-            for(int i =1; i < numLevels; i++)
+            for(int i =0; i < numLevels; i++)
             {
                 //this is for the amount of nodes on each level
                 for(int j =1; i < (2^(j-1));j++)
