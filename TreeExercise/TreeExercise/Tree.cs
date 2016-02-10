@@ -41,7 +41,7 @@ namespace TreeExercise
                 {
                     //creating an array of nodes that will hold all the nodes on that current level
                     Node[] levelNodes;
-                    levelNodes =[(2 ^ (j - 1)) + 2];//the reason for the +2 is for the 0's at index 0 and at the very last index (acting like there is nothing to the left or right)
+                    levelNodes = new Node[(2 ^(j - 1)) + 2];//the reason for the +2 is for the 0's at index 0 and at the very last index (acting like there is nothing to the left or right)
                 
                 }
 
