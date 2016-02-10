@@ -11,8 +11,14 @@ namespace TreeExercise
     {
 
         //attributes
-        private Node root = null;
+        private Node root;
         private int numLevels;//the number of levels that the user has inputted
+
+        public Tree(int levels)
+        {
+            numLevels = levels;//setting up the amount of levels there will be
+            root = new Node(1);//starting by setting the root to have a default value of 1
+        }
 
         //root value
         public Node Root
@@ -23,10 +29,22 @@ namespace TreeExercise
         /// <summary>
         /// for inserting a node into the tree
         /// </summary>
-        /// <param name="data"></param>
-        public void Insert(int data)
+        public void Insert()
         {
-            
+            Node prevNode = null;//this is the previous parent node. Keeping track of the parent
+            Node currNode = null;//this is the current node that is being addressed.
+
+            //setting up for loop for the amount of levels
+            for(int i =1; i < numLevels; i++)
+            {
+                //this is for the amount of nodes on each level
+                for(int j =1; i < (2^(j-1));j++)
+                {
+
+                }
+
+            }
+
         }
 
         /// <summary>
