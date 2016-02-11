@@ -61,6 +61,14 @@ namespace TreeExercise
                 if(parentNodes[k-1]==null)//if there is nothing to the left of the current node
                 {
                     parentNodes[k].Left = new Node(parentNodes[k].Data);//setting the new node's data (one at leftmost end) to parent's data
+                    int rightData = parentNodes[k].Data + parentNodes[k + 1].Data;//adding the left and right data together
+                    parentNodes[k].Right = new Node(rightData);
+                }
+                else if (parentNodes[k + 1] == null)//if node is the rightmost one
+                {
+                    parentNodes[k].Right = new Node(parentNodes[k].Data);
+                    int leftData = parentNodes[k].Data + parentNodes[k - 1].Data;//adding the rightmost one's data and the one to the left of that one together
+                    parentNodes[k].Left = new Node(leftData);
                 }
             }
 
