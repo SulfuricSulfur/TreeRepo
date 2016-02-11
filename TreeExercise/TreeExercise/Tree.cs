@@ -12,13 +12,11 @@ namespace TreeExercise
 
         //attributes
         private Node root;
-        private int numLevels;//the number of levels that the user has inputted
         public List<Node> parentNodes;
         public List<Node> childrenNodes;//the nodes (left and right) of the parent
 
-        public Tree(int levels)
+        public Tree()
         {
-            numLevels = levels;//setting up the amount of levels there will be
             root = new Node(1);//starting by setting the root to have a default value of 1
             parentNodes = new List<Node>();
             childrenNodes = new List<Node>();
@@ -31,9 +29,24 @@ namespace TreeExercise
         }
   
 
-        public void Insert()
+        /// <summary>
+        /// This will be the insert method that will be called initially in the main program.
+        /// Will see if there is neighbor nodes. If not will pass the data of parent node .
+        /// </summary>
+        public void Insert(int numLevels)//the number of levels there will be
         {
-
+            for(int i =0; i < numLevels; i++)//level 0 is first level
+            {
+                if(i == 0)//the first level, the root only for now
+                {
+                    parentNodes.Add(root);
+                }
+                else if (i > 0)
+                {
+                    Insert(root.Data, root);//if there is multiple levels, start at root and make way down
+                }
+                
+            }
         }
 
         /// <summary>
