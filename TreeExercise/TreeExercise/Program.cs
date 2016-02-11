@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace TreeExercise
 {
@@ -33,6 +34,9 @@ namespace TreeExercise
          
                 binaryTree.Insert(numLvl);//enter the user's input and print out tree
             binaryTree.Traverse(binaryTree.Root);
+
+            Console.WriteLine("Press any key to finish");
+            Console.ReadKey();
         }
     }
 }
