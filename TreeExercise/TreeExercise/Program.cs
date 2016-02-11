@@ -15,7 +15,7 @@ namespace TreeExercise
 
             //Will ask user for input later on. For now putting in levels for debugging
             binaryTree.Insert(4);
-
+            binaryTree.Traverse(binaryTree.Root);
         }
     }
 }

@@ -95,7 +95,7 @@ namespace TreeExercise
                         parentNodes[k].Left = new Node(leftData);
                         parentNodes[k].Right = new Node(rightData);
 
-                        Traverse(parentNodes[k]);
+                       // Traverse(parentNodes[k]);
                     }
 
                     childrenNodes.Add(parentNodes[k].Left);//adding the children nodes to the children list. Goes from left to right(left and right of one parent, then left and right of the other
