@@ -156,8 +156,9 @@ namespace TreeExercise
         {
             if(node != null)
             {
-                Traverse(node.Left);
                 Console.WriteLine(node.Data);
+                Traverse(node.Left);
+                
                 Traverse(node.Right);
                 
             }
