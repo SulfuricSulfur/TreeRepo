@@ -83,8 +83,12 @@ namespace TreeExercise
                 childrenNodes.Add(parentNodes[k].Right);
             }
 
-            
+            //replacing the parents with the children.
+            //making the children the new parents
+            parentNodes = childrenNodes;
 
+            //clearing the childrenNodes to make way from the children of the new parents
+            childrenNodes.Clear();
 
             /*
             for (int i =0; i < numLevels; i++)
@@ -103,14 +107,10 @@ namespace TreeExercise
                     for(int f=0; f< levelNodesC.Length -1; f++)
                     {
 
-                    }
-                    
-
+                    }   
                 }
                 */
             //}
-
-
         }
 
         /// <summary>
