@@ -31,6 +31,27 @@ namespace TreeExercise
             }
             while (int.TryParse(output, out numLvl) == false);//while the user has entered an invalid input, keep asking)
 
+            Console.WriteLine("Okay, before I show you the tree do you want to play a guessing game? ");
+            string userReply = Console.ReadLine();
+            if(userReply.ToUpper() == "YES" || userReply.ToUpper() == "SURE" || userReply.ToUpper() == "OKAY" || userReply.ToUpper() == "Y")
+            {
+                int numGuess = 8;//the number of guesses the user has left
+                Console.WriteLine("Okay cool" );//prompting user to enter a guess for the number of nodes
+                int answer;//the answer the user submitted
+                string guess;
+                do
+                {
+                    Console.WriteLine("From the number of levels you entered, guess how many numbers there will be total," + "\nYou have " + numGuess + " tries left: ");
+                    guess = Console.ReadLine();
+                    if (int.TryParse(guess, out answer) == false)
+                    {
+                        Console.WriteLine("That is not a valid number. Please try again.");
+                    }
+                    //else if(guess)
+                } while (numGuess > 0);
+                
+
+            }
             
 
                 binaryTree.Insert(numLvl);
