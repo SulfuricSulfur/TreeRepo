@@ -13,8 +13,6 @@ namespace TreeExercise
         private Node right;//node to the right of the current node
         private int data;//the number being stored
 
-        //the parent node
-        private Node parent;
 
         //constructor
         //the node will take in a data value that corresponds to it
@@ -41,11 +39,7 @@ namespace TreeExercise
             get { return right; }
             set { right = value; }
         }
-        public Node Parent
-        {
-            get { return parent; }
-            set { parent = value; }
-        }
+
 
 
     }

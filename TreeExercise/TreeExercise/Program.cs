@@ -23,17 +23,15 @@ namespace TreeExercise
             {
                 Console.WriteLine("How many levels of the tree would you like? ");
                 output = Console.ReadLine();
-                if (int.TryParse(output, out numLvl) == false)
+                if (int.TryParse(output, out numLvl) == false || numLvl <0 )//added an exception if user enters a negative number or a character
                 {
                     Console.WriteLine("That is not a valid number. Please try again.");
                 }
 
             }
             while (int.TryParse(output, out numLvl) == false);//while the user has entered an invalid input, keep asking)
-
-            
-
-                binaryTree.Insert(numLvl);
+         
+                binaryTree.Insert(numLvl);//enter the user's input and print out tree
             binaryTree.Traverse(binaryTree.Root);
         }
     }
