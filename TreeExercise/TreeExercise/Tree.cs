@@ -60,12 +60,13 @@ namespace TreeExercise
             for (int i = 0; i < levels; i++)//level 0 is first level
             {
                 //setting up for loop for the amount of levels
+                if (i == 0)//if the first node in the list.(only the root)
+                {
+                    parentNodes.Add(root);
+                }
                 for (int k = 0; k < parentNodes.Count; k++)
                 {
-                    if (k == 0)//if the first node in the list.(only the root)
-                    {
-                        parentNodes.Add(root);
-                    }
+                   
                     if (parentNodes.Count == 1)
                     {
                         parentNodes[k].Left = new Node(parentNodes[k].Data);//setting the left and right node of the root to the data of the root
@@ -103,6 +104,11 @@ namespace TreeExercise
 
                 //replacing the parents with the children.
                 //making the children the new parents
+                for(int j =0; j<childrenNodes.Count; j++)
+                {
+                    //if()
+                    parentNodes[j] = childrenNodes[j];
+                }
                 parentNodes = childrenNodes;
 
                 //clearing the childrenNodes to make way from the children of the new parents
