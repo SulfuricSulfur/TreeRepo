@@ -16,10 +16,23 @@ namespace TreeExercise
             //Will ask user for input later on. For now putting in levels for debugging
 
             //Asking user for how many levels they want
-            //Console.WriteLine("How many levels of the tree would you like? ");
-            //int numLvl = int.Parse(Console.ReadLine());//parsing the string to a number
+            Console.WriteLine("How many levels of the tree would you like? ");
+            string output;
+           // string output = Console.ReadLine();
+            int numLvl;//parsing the string to a number
+            do//ask for input once. If it is invalid, keep asking.
+            {
+                Console.WriteLine("How many levels of the tree would you like? ");
+                output = Console.ReadLine();
+                if (int.TryParse(output, out numLvl) == false)
+                {
+                    Console.WriteLine("That is not a valid number. Please try again.");
+                }
 
-            binaryTree.Insert(4);
+            }
+            while (int.TryParse(output, out numLvl) == false);//while the user has entered an invalid input, keep asking)
+
+                binaryTree.Insert(4);
             binaryTree.Traverse(binaryTree.Root);
         }
     }
