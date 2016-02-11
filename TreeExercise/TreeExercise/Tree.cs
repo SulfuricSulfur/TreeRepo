@@ -156,14 +156,37 @@ namespace TreeExercise
         {
             if(node != null)
             {
+                int numTraverse = 0 ;
                 Console.WriteLine(node.Data);
-                Traverse(node.Left);
+
+                Traverse(node.Left, numTraverse);
                 
-                Traverse(node.Right);
+                Traverse(node.Right, numTraverse);
                 
             }
         }
 
+        /// <summary>
+        /// keeps goign all the way to the left printing out the numbers.
+        /// if there is no more to the left, it goes up one and then to the right. then up one more, to the right, then to left etc. etc.
+        /// </summary>
+        /// <param name="node"></param>
+        /// <param name="numTraverse"></param>
+        private void Traverse(Node node, int numTraverse)
+        {
+            if (node != null)
+            {
+                numTraverse++;//takes in how many times it has been tranersed and adds that to a counter. This determines how many ">" there will be
+                for(int i =0; i < numTraverse; i++)
+                {
+                    Console.Write(">");
+                }
+                Console.WriteLine(node.Data);
+                Traverse(node.Left,numTraverse);
 
+                Traverse(node.Right, numTraverse);
+
+            }
+        }
     }
 }
