@@ -19,7 +19,7 @@ namespace TreeExercise
             //Console.WriteLine("How many levels of the tree would you like? ");
             //int numLvl = int.Parse(Console.ReadLine());//parsing the string to a number
 
-            binaryTree.Insert(3);
+            binaryTree.Insert(4);
             binaryTree.Traverse(binaryTree.Root);
         }
     }

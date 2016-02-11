@@ -57,10 +57,10 @@ namespace TreeExercise
         /// </summary>
         public void Insert(int levels)
         {
-            for (int i = 0; i < levels; i++)//level 0 is first level
+            for (int i = 1; i < levels; i++)//level 0 is first level
             {
                 //setting up for loop for the amount of levels
-                if (i == 0)//if the first node in the list.(only the root)
+                if (i == 1)//if the first node in the list.(only the root)
                 {
                     parentNodes.Add(root);
                 }
