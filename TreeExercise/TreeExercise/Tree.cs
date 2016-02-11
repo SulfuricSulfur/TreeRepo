@@ -13,11 +13,13 @@ namespace TreeExercise
         //attributes
         private Node root;
         private int numLevels;//the number of levels that the user has inputted
+        public List<Node> parentNodes;
 
         public Tree(int levels)
         {
             numLevels = levels;//setting up the amount of levels there will be
             root = new Node(1);//starting by setting the root to have a default value of 1
+            parentNodes = new List<Node>();
         }
 
         //root value
@@ -32,14 +34,26 @@ namespace TreeExercise
         public void Insert()
         {
             Node currNode = null;//this is the current node that is being addressed.
-   
+
             //setting up for loop for the amount of levels
-            for(int i =0; i < numLevels; i++)
+
+            
+            for(int k=0; k < parentNodes.Count; k++)
             {
-                List<Node> parentNodes = new List<Node>();
+                if(parentNodes[k-1]==null)//if there is nothing to the left of the current node
+                {
+
+                }
+            }
+
+
+            /*
+            for (int i =0; i < numLevels; i++)
+            {
+                //List<Node> parentNodes = new List<Node>();
         
                 //this is for the amount of nodes on each level
-                for(int j =1; i < (2^(j-1));j++)
+                for(int j =1; j < (2^(j-1));j++)
                 {
                     //creating an array of nodes that will hold all the nodes on that current level
                     int slots = (2 ^ (j - 1)) + 2;//the number of slots in the array
@@ -47,15 +61,16 @@ namespace TreeExercise
                     levelNodesC[0] = new Node(0);//adding a node with value of 0 to first spot
                     levelNodesC[slots-1] = new Node(0);//adding a node with value of 0 to last spot
 
-                    //getting started with the root node
-                    if (i == 0)
+                    for(int f=0; f< levelNodesC.Length -1; f++)
                     {
 
                     }
+                    
 
                 }
-
+                */
             }
+
 
         }
 
