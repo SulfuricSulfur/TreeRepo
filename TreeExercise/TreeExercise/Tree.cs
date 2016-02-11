@@ -107,10 +107,17 @@ namespace TreeExercise
                 parentNodes.Clear();//clearing the parent node list
                 for(int j =0; j<childrenNodes.Count; j++)
                 {
-                    parentNodes.Add(childrenNodes[j]);
+                    if (j < parentNodes.Count)
+                    {
+                        parentNodes[j] = childrenNodes[j];
+                    }
+                    else
+                    {
+                        parentNodes.Add(childrenNodes[j]);
+                    }          
                     
                 }
-                parentNodes = childrenNodes;
+               // parentNodes = childrenNodes;
 
                 //clearing the childrenNodes to make way from the children of the new parents
                 childrenNodes.Clear();
