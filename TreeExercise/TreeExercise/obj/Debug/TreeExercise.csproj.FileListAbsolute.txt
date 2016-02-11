@@ -1,1 +1,6 @@
 J:\TreeRepo\TreeExercise\TreeExercise\bin\Debug\TreeExercise.exe.config
+J:\TreeRepo\TreeExercise\TreeExercise\bin\Debug\TreeExercise.exe
+J:\TreeRepo\TreeExercise\TreeExercise\bin\Debug\TreeExercise.pdb
+J:\TreeRepo\TreeExercise\TreeExercise\obj\Debug\TreeExercise.csprojResolveAssemblyReference.cache
+J:\TreeRepo\TreeExercise\TreeExercise\obj\Debug\TreeExercise.exe
+J:\TreeRepo\TreeExercise\TreeExercise\obj\Debug\TreeExercise.pdb

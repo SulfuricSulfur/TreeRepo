@@ -58,13 +58,20 @@ namespace TreeExercise
             //setting up for loop for the amount of levels
             for (int k=0; k < parentNodes.Count; k++)
             {
-                if(parentNodes[k-1]==null)//if there is nothing to the left of the current node
+                if(k==0)//if there is nothing to the left of the current node. The first node
                 {
+                    //if there is only the root node
+                    if (parentNodes.Count == 1)
+                    {
+                        parentNodes[k].Left = new Node(parentNodes[k].Data);//setting the left and right node of the root to the data of the root
+                        parentNodes[k].Right = new Node(parentNodes[k].Data);
+                    }
+
                     parentNodes[k].Left = new Node(parentNodes[k].Data);//setting the new node's data (one at leftmost end) to parent's data
                     int rightData = parentNodes[k].Data + parentNodes[k + 1].Data;//adding the parent and right neighbor's data together
                     parentNodes[k].Right = new Node(rightData);
                 }
-                else if (parentNodes[k + 1] == null)//if node is the rightmost one
+                else if (k == parentNodes.Count-1)//if node is the rightmost one. (the last node in the list)
                 {
                     parentNodes[k].Right = new Node(parentNodes[k].Data);
                     int leftData = parentNodes[k].Data + parentNodes[k - 1].Data;//adding the rightmost one's data and the one to the left of that one together
