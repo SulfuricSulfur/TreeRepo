@@ -10,6 +10,12 @@ namespace TreeExercise
     {
         static void Main(string[] args)
         {
+            //the tree object itself
+            Tree binaryTree = new Tree();
+
+            //Will ask user for input later on. For now putting in levels for debugging
+            binaryTree.Insert(4);
+
         }
     }
 }
