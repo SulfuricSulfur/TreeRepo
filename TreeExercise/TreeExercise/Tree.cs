@@ -43,7 +43,7 @@ namespace TreeExercise
                 }
                 else if (i > 0)
                 {
-                    Insert(root.Data, root);//if there is multiple levels, start at root and make way down
+                    Insert();//if there is multiple levels, start at root and make way down
                 }
                 
             }
@@ -52,17 +52,15 @@ namespace TreeExercise
         /// <summary>
         /// for inserting a node into the tree
         /// </summary>
-        private void Insert(int data, Node currentNode )
+        private void Insert()
         {
 
             //setting up for loop for the amount of levels
-
-
             for (int k=0; k < parentNodes.Count; k++)
             {
                 if(parentNodes[k-1]==null)//if there is nothing to the left of the current node
                 {
-
+                    parentNodes[k].Left = new Node(parentNodes[k].Data);//setting the new node's data (one at leftmost end) to parent's data
                 }
             }
 
@@ -89,7 +87,7 @@ namespace TreeExercise
 
                 }
                 */
-            }
+            //}
 
 
         }
