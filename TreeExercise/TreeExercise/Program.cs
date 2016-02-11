@@ -16,7 +16,6 @@ namespace TreeExercise
             //Will ask user for input later on. For now putting in levels for debugging
 
             //Asking user for how many levels they want
-            Console.WriteLine("How many levels of the tree would you like? ");
             string output;
            // string output = Console.ReadLine();
             int numLvl;//parsing the string to a number
@@ -32,7 +31,9 @@ namespace TreeExercise
             }
             while (int.TryParse(output, out numLvl) == false);//while the user has entered an invalid input, keep asking)
 
-                binaryTree.Insert(4);
+            
+
+                binaryTree.Insert(numLvl);
             binaryTree.Traverse(binaryTree.Root);
         }
     }
