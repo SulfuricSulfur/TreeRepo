@@ -104,10 +104,11 @@ namespace TreeExercise
 
                 //replacing the parents with the children.
                 //making the children the new parents
+                parentNodes.Clear();//clearing the parent node list
                 for(int j =0; j<childrenNodes.Count; j++)
                 {
-                    //if()
-                    parentNodes[j] = childrenNodes[j];
+                    parentNodes.Add(childrenNodes[j]);
+                    
                 }
                 parentNodes = childrenNodes;
 
