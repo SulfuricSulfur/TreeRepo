@@ -18,8 +18,8 @@ namespace TreeExercise
         public Tree()
         {
             root = new Node(1);//starting by setting the root to have a default value of 1
-            parentNodes = new List<Node>();
-            childrenNodes = new List<Node>();
+            parentNodes = new List<Node>();//current level of nodes
+            childrenNodes = new List<Node>();//next level of nodes
         }
 
         //root value
@@ -77,6 +77,8 @@ namespace TreeExercise
                     //setting the left and right values of the children
                     parentNodes[k].Left = new Node(leftData);
                     parentNodes[k].Right = new Node(rightData);
+
+                    Traverse(parentNodes[k]);
                 }
 
                 childrenNodes.Add(parentNodes[k].Left);//adding the children nodes to the children list. Goes from left to right(left and right of one parent, then left and right of the other
@@ -122,7 +124,10 @@ namespace TreeExercise
         {
             if(node != null)
             {
-
+                Traverse(node.Left);
+                Console.WriteLine(node.Data);
+                Traverse(node.Right);
+                
             }
         }
 
