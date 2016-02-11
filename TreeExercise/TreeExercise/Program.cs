@@ -35,6 +35,7 @@ namespace TreeExercise
                 binaryTree.Insert(numLvl);//enter the user's input and print out tree
             binaryTree.Traverse(binaryTree.Root);
 
+            //this will leave the console window open until the user presses a key to exit
             Console.WriteLine("Press any key to finish");
             Console.ReadKey();
         }
