@@ -1,0 +1,2 @@
+The script is composed of a tree class, a node class, and a base program class. The node class is what holds the data for tree. 
+There is a right, left, and data attribute in the class. The data int is what holds the actual number for the node.
