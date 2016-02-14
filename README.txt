@@ -36,3 +36,7 @@ will keep asking user for a valid input until they finally enter a number that m
 Insert method to be processed. Some large numbers cause an OutOfMemory Exception due to the recursion and for loops. On debug, the console will give the user
 the numbers it was able to process up until that point. When the tree is printed out and finished, it will then tell the user to press any key to finish.
 Pressing any key will close the console window.
+
+Because of the program, the console has already been compiled as an executable. The executable is located in the debug folder which is in the bin folder of the project.
+Double clicking the application should open the console window and run it. The program then should run as expected and will close the window if the user presses a key
+at the end or it the program encounters an error. 
