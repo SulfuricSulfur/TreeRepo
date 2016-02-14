@@ -44,7 +44,6 @@ at the end or it the program encounters an error.
 The code is organised into three main classes that handle the work. The tree class is where most of the work involving generating and setting the tree takes place.
 The node class is where the data is stored. The program class is where the program is started and initialized. The modules used are the base modules that are given
 in Visual Studio C# programs. The modules have been created from the classes, which access eachother from inside the code. 
-Once the program is started, user will be propted 
 
 Once the program is started, user will be prompted for an int. Once a valid int is entered, the int will be passed to the tree class via Insert method. 
 From there, inside the tree class, the tree itself will be generated. When a node is created, control will be passed to the node class, where the node itself 
