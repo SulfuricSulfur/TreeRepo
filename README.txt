@@ -40,3 +40,7 @@ Pressing any key will close the console window.
 Because of the program, the console has already been compiled as an executable. The executable is located in the debug folder which is in the bin folder of the project.
 Double clicking the application should open the console window and run it. The program then should run as expected and will close the window if the user presses a key
 at the end or it the program encounters an error. 
+
+The code is organised into three main classes that handle the work. The tree class is where most of the work involving generating and setting the tree takes place.
+The node class is where the data is stored. The program class is where the program is started and initialized. The modules used are the base modules that are given
+in Visual Studio C# programs. The modules have been created from the classes, which access eachother from inside the code. 
