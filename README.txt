@@ -44,3 +44,11 @@ at the end or it the program encounters an error.
 The code is organised into three main classes that handle the work. The tree class is where most of the work involving generating and setting the tree takes place.
 The node class is where the data is stored. The program class is where the program is started and initialized. The modules used are the base modules that are given
 in Visual Studio C# programs. The modules have been created from the classes, which access eachother from inside the code. 
+Once the program is started, user will be propted 
+
+Once the program is started, user will be prompted for an int. Once a valid int is entered, the int will be passed to the tree class via Insert method. 
+From there, inside the tree class, the tree itself will be generated. When a node is created, control will be passed to the node class, where the node itself 
+will be set up. After the tree has been created, the control will be passed back to the program class. From there, control will be passed to the public Traverse method. 
+The public Traverse method will then give control to the private Traverse method that will handle printing out the node’s data from there. The Traverse private method
+ handles printing out recursively. After all the data from the nodes have been printed out, the control will exit the method and the tree class and return to the main program class. 
+From there the control will remain and keep the program open until user presses key to exit program. See above for more in-depth about each part of the program.
