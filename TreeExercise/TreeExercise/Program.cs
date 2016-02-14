@@ -31,8 +31,18 @@ namespace TreeExercise
 
             }
             while (int.TryParse(output, out numLvl) == false);//while the user has entered an invalid input, keep asking)
-         
+
+
+            Console.WriteLine("Processing the tree");//telling the user that the tree is being created
+            try
+            {
+
                 binaryTree.Insert(numLvl);//enter the user's input and print out tree
+            }
+            catch (OutOfMemoryException)
+            {
+                Console.WriteLine("Ran out of memory. Try a smaller number of levels. Displaying numbers before exception.");
+            }
             binaryTree.Traverse(binaryTree.Root);
 
             //this will leave the console window open until the user presses a key to exit
